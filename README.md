@@ -1,7 +1,8 @@
 # CS212 — Projects
 
-Projects completed for **CS212** at the **University of Oregon**.
-
+> [!NOTE]
+> All project checkers and test files were provided by **Professor Jieyang Chen**.
+> I only take credit for the code files specifically identified in each project's `README.md`.
 ---
 
 ## Projects
@@ -26,7 +27,6 @@ Projects completed for **CS212** at the **University of Oregon**.
 ## About This Repository
 
 This repository contains my work from CS212 at the University of Oregon. Each project directory contains the files associated with that project.
-If a project directory contains multiple files, its `README.md` identifies the specific file or files for which I claim credit.
 
 ### Course Information
 
