@@ -1,0 +1,33 @@
+#!/bin/bash
+
+
+if [[ ! -f 3E_correct_output ]] ; then
+   echo "Error: you need to download the file 3E_correct_output and place it in this directory."
+   echo "Exiting."
+   exit 1
+fi
+
+#Check that code compiles with provided Makefile
+gcc -o proj3E proj3E.c
+if [[ $? != 0 ]] ; then
+   echo "Compile failure!"
+   exit 1
+fi
+
+./proj3E 3 4 5.5 x - | cut -d'.' -f1 > your_output
+./proj3E 3 4 - 5 x | cut -d'.' -f1 >> your_output
+./proj3E 3.5 2 x 11 - | cut -d'.' -f1 >> your_output
+./proj3E 2 3 11 + 5 - x | cut -d'.' -f1 >> your_output
+
+#Check for correct output
+diff 3E_correct_output your_output
+if [[ $? != 0 ]] ; then
+   echo "Your output is not correct."
+   exit 1
+fi
+
+echo "Your program appears to be working correctly."
+echo "It compiles, runs, and generates the correct output."
+echo "Please upload your code to Canvas, following the instructions in the prompt."
+echo "Grading will consist of the steps performed by this script, complemented by inspection of your code."
+
