@@ -1,0 +1,323 @@
+if [[ ! -f project2A.c ]] ; then
+   echo "Cannot find file project2A.c.  Run this script in the same directory as as project2A.c"
+   echo "FAILED"
+   exit 1
+fi
+gcc project2A.c
+if [[ $? != 0 ]] ; then
+   echo "Cannot compile program project2A.c.  Fix your compile problem."
+   echo "FAILED"
+   exit 1
+fi
+
+./a.out > student.2A.$$
+
+X="30 has three factors
+42 has three factors
+60 has three factors
+66 has three factors
+70 has three factors
+78 has three factors
+84 has three factors
+90 has three factors
+102 has three factors
+105 has three factors
+110 has three factors
+114 has three factors
+120 has three factors
+126 has three factors
+130 has three factors
+132 has three factors
+138 has three factors
+140 has three factors
+150 has three factors
+154 has three factors
+156 has three factors
+165 has three factors
+168 has three factors
+170 has three factors
+174 has three factors
+180 has three factors
+182 has three factors
+186 has three factors
+190 has three factors
+195 has three factors
+198 has three factors
+204 has three factors
+220 has three factors
+222 has three factors
+228 has three factors
+230 has three factors
+231 has three factors
+234 has three factors
+238 has three factors
+240 has three factors
+246 has three factors
+252 has three factors
+255 has three factors
+258 has three factors
+260 has three factors
+264 has three factors
+266 has three factors
+270 has three factors
+273 has three factors
+276 has three factors
+280 has three factors
+282 has three factors
+285 has three factors
+286 has three factors
+290 has three factors
+294 has three factors
+300 has three factors
+306 has three factors
+308 has three factors
+310 has three factors
+312 has three factors
+315 has three factors
+318 has three factors
+322 has three factors
+336 has three factors
+340 has three factors
+342 has three factors
+345 has three factors
+348 has three factors
+350 has three factors
+354 has three factors
+357 has three factors
+360 has three factors
+364 has three factors
+366 has three factors
+370 has three factors
+372 has three factors
+374 has three factors
+378 has three factors
+380 has three factors
+385 has three factors
+396 has three factors
+399 has three factors
+402 has three factors
+406 has three factors
+408 has three factors
+410 has three factors
+414 has three factors
+418 has three factors
+426 has three factors
+429 has three factors
+430 has three factors
+434 has three factors
+435 has three factors
+438 has three factors
+440 has three factors
+442 has three factors
+444 has three factors
+450 has three factors
+455 has three factors
+456 has three factors
+460 has three factors
+465 has three factors
+468 has three factors
+470 has three factors
+474 has three factors
+476 has three factors
+480 has three factors
+483 has three factors
+490 has three factors
+492 has three factors
+494 has three factors
+495 has three factors
+498 has three factors
+504 has three factors
+506 has three factors
+516 has three factors
+518 has three factors
+520 has three factors
+522 has three factors
+525 has three factors
+528 has three factors
+530 has three factors
+532 has three factors
+534 has three factors
+540 has three factors
+550 has three factors
+552 has three factors
+555 has three factors
+558 has three factors
+560 has three factors
+561 has three factors
+564 has three factors
+572 has three factors
+574 has three factors
+580 has three factors
+582 has three factors
+585 has three factors
+588 has three factors
+590 has three factors
+594 has three factors
+595 has three factors
+598 has three factors
+600 has three factors
+602 has three factors
+606 has three factors
+609 has three factors
+610 has three factors
+612 has three factors
+615 has three factors
+616 has three factors
+618 has three factors
+620 has three factors
+624 has three factors
+627 has three factors
+636 has three factors
+638 has three factors
+642 has three factors
+644 has three factors
+645 has three factors
+646 has three factors
+650 has three factors
+651 has three factors
+654 has three factors
+658 has three factors
+663 has three factors
+665 has three factors
+666 has three factors
+670 has three factors
+672 has three factors
+678 has three factors
+680 has three factors
+682 has three factors
+684 has three factors
+693 has three factors
+696 has three factors
+700 has three factors
+702 has three factors
+705 has three factors
+708 has three factors
+710 has three factors
+715 has three factors
+720 has three factors
+726 has three factors
+728 has three factors
+730 has three factors
+732 has three factors
+735 has three factors
+738 has three factors
+740 has three factors
+741 has three factors
+742 has three factors
+744 has three factors
+748 has three factors
+750 has three factors
+754 has three factors
+756 has three factors
+759 has three factors
+760 has three factors
+762 has three factors
+765 has three factors
+774 has three factors
+777 has three factors
+782 has three factors
+786 has three factors
+790 has three factors
+792 has three factors
+795 has three factors
+804 has three factors
+805 has three factors
+806 has three factors
+810 has three factors
+812 has three factors
+814 has three factors
+816 has three factors
+819 has three factors
+820 has three factors
+822 has three factors
+825 has three factors
+826 has three factors
+828 has three factors
+830 has three factors
+834 has three factors
+836 has three factors
+846 has three factors
+850 has three factors
+852 has three factors
+854 has three factors
+855 has three factors
+860 has three factors
+861 has three factors
+868 has three factors
+874 has three factors
+876 has three factors
+880 has three factors
+882 has three factors
+884 has three factors
+885 has three factors
+888 has three factors
+890 has three factors
+894 has three factors
+897 has three factors
+900 has three factors
+902 has three factors
+903 has three factors
+906 has three factors
+912 has three factors
+915 has three factors
+918 has three factors
+920 has three factors
+935 has three factors
+936 has three factors
+938 has three factors
+940 has three factors
+942 has three factors
+945 has three factors
+946 has three factors
+948 has three factors
+950 has three factors
+952 has three factors
+954 has three factors
+957 has three factors
+960 has three factors
+962 has three factors
+969 has three factors
+970 has three factors
+975 has three factors
+978 has three factors
+980 has three factors
+984 has three factors
+986 has three factors
+987 has three factors
+988 has three factors
+994 has three factors
+996 has three factors"
+echo "$X"> correct.2A.$$
+
+diff student.2A.$$ correct.2A.$$ > /dev/null
+if [[ $? == 0 ]] ; then
+   echo "The output of your program matched the correct output."
+   echo "Success."
+   rm student.2A.$$ correct.2A.$$
+   exit 0
+fi
+
+lines_student=$(cat student.2A.$$ | wc -l)
+lines_correct=$(cat correct.2A.$$ | wc -l)
+if [[ $lines_student != $lines_correct ]] ; then
+    echo "The number of lines do not match: you have $lines_student and the correct version has $lines_correct"
+    rm student.2A.$$ correct.2A.$$
+    exit 1
+fi
+
+cat student.2A.$$ | head -n 1 > student.short2A.$$
+cat correct.2A.$$ | head -n 1 > correct.short2A.$$
+diff student.short2A.$$ correct.short2A.$$ > /dev/null
+if [[ $? != 0 ]] ; then
+   echo "The first line of your program is: "
+   cat student.short2A.$$
+   echo "But the correct first line is: "
+   cat correct.short2A.$$
+   rm student.2A.$$ correct.2A.$$
+   rm student.short2A.$$ correct.short2A.$$
+   exit 1
+fi
+
+echo "The program does not produce the correct output.  You should use the \"diff\" command to learn more.  Your output is called student.2A and the correct output is called correct.2A"
+mv student.2A.$$ student.2A
+mv correct.2A.$$ correct.2A
