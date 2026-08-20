@@ -1,0 +1,25 @@
+# Create directories
+mkdir "$1"
+mkdir "$1/dir1"
+mkdir "$1/dir2"
+mkdir "$1/dir1/dir3"
+mkdir "$1/dir1/dir3/dir4"
+
+# Create files
+touch "$1/dir1/fileA"
+touch "$1/dir2/fileB"
+touch "$1/dir1/dir3/fileC"
+
+# Write inside files
+echo "fileA!" > "$1/dir1/fileA"
+echo "Hi" > "$1/dir2/fileB"
+echo "Bye" > "$1/dir1/dir3/fileC"
+
+# Set priveleges
+chmod 600 "$1/dir1/fileA"
+chmod 640 "$1/dir2/fileB"
+chmod 600 "$1/dir1/dir3/fileC"
+chmod 500 "$1/dir1/dir3/dir4"
+chmod 000 "$1/dir1/dir3"
+chmod 700 "$1/dir1"
+chmod 755 "$1/dir2"

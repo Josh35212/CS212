@@ -1,0 +1,71 @@
+#!/bin/bash
+
+if [[ ! -f proj1B ]] ; then
+   echo "Cannot locate script named proj1B.  Make sure this script and your proj1B script are in the same directory"
+   exit 1
+fi
+
+root=tmp.$$
+echo "Will ask your script to make the directory structure in the directory tmp.$$"
+bash ./proj1B tmp.$$
+if [[ $? != 0 ]] ; then
+   echo "It appears there was an error with invoking your script"
+   exit 1
+fi
+
+# Start by making sure dir3 is correct
+if [[ ! -d $root/dir1/dir3 ]] ; then
+   echo "No $root/dir1/dir3 directory!"
+   exit 1
+fi
+perms=$(ls -ld $root/dir1/dir3 | cut -d' ' -f1)
+if [[ "$perms" != "d---------" ]] ; then
+   echo "$root/dir1/dir3 directory does not have permissions 000"
+   exit 1
+fi
+
+# Now make dir3 have easier to work with permissions
+chmod 700 $root/dir1/dir3
+
+dirs="dir1:drwx------ dir1/dir3/dir4:dr-x------ dir2:drwxr-xr-x"
+for i in $dirs ; do
+   name=$(echo $i | cut -d':' -f1)
+   perms=$(echo $i | cut -d':' -f2)
+   if [[ ! -d $root/$name ]] ; then
+      echo "No $root/$name directory!"
+      exit 1
+   fi
+   actual_perms=$(ls -ld $root/$name | cut -d' ' -f1)
+   if [[ "$perms" != "$actual_perms" ]] ; then
+      echo "$root/$name directory does not have permissions $perms"
+      exit 1
+   fi
+done
+
+files="dir1/fileA:-rw-------:fileA! dir2/fileB:-rw-r-----:Hi dir1/dir3/fileC:-rw-------:Bye"
+for i in $files ; do
+   name=$(echo $i | cut -d':' -f1)
+   perms=$(echo $i | cut -d':' -f2)
+   contents=$(echo $i | cut -d':' -f3)
+   if [[ ! -f $root/$name ]] ; then
+      echo "No $root/$name directory!"
+      exit 1
+   fi
+   actual_perms=$(ls -l $root/$name | cut -d' ' -f1)
+   if [[ "d$perms" != "d$actual_perms" ]] ; then
+      echo "$root/$name file does not have permissions $perms"
+      exit 1
+   fi
+   actual_contents=$(cat $root/$name)
+   if [[ "$contents" != "$actual_contents" ]] ; then
+      echo "$root/$name file does not have contents $contents"
+      exit 1
+   fi
+done
+
+# Change dir3 back to the original permissions so the script can
+# run multiple times
+chmod 000 $root/dir1/dir3
+
+echo "Congrats!  It all works!"
+exit 0
