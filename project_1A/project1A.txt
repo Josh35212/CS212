@@ -1,0 +1,18 @@
+Hello, my name is Josh Gilliam and I am a sophomore cybersecurity student.
+So far I have no experience with C, but that means I am very excited for this course!
+I have a general understanding of things that have been built with C, but I have
+not written a single line of C before. That being said I hope that my knowledge
+of python will help making the learning process in mastering C at least a little easier.
+As for what I want to get from this class, obviously I would like to learn as much C
+as possible. But I also am looking forward to learning about linux on a deeper level.
+Prior to this class I have had experience with Ubuntu so I am glad the vm we are using
+for this class is Debian. In the end, I am ready to take on the challenges this course
+will bring, as I believe the things I will learn will be valuable and applicable 
+for the remaining CS courses in the sequence and later down the line in the job market.
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
+That's all I can think of to write! So here I will just copy and paste this line! :)
